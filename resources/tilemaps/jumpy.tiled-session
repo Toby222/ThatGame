@@ -1,0 +1,49 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "map-1.tmj",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "map-1.tmj": {
+            "scale": 1.108828125,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 473.0219122102444,
+                "y": 317.0013386880857
+            }
+        },
+        "map-1.tmj#bluish-tiles": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "map-1.tmx": {
+            "scale": 0.927734375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 556.7326315789475,
+                "y": 368.10105263157897
+            }
+        },
+        "map-1.tmx#bluish-tiles": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "/home/toby/repos/macroquad-jumper/resources/tilemaps",
+    "last.imagePath": "/home/toby/repos/macroquad-jumper/resources",
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "map-1.tmj",
+        "map-1.tmx"
+    ],
+    "project": "jumpy.tiled-project",
+    "recentFiles": [
+        "map-1.tmj",
+        "map-1.tmx"
+    ],
+    "tileset.embedInMap": true
+}
