@@ -1,0 +1,39 @@
+name: GitHub Pages
+on:
+  push:
+    branches: [ "main" ]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Ensure Rust is correctly set up
+        run: |
+          rustup default nightly
+          rustup target add wasm32-unknown-unknown
+      - name: Build
+        run: cargo build --verbose --target wasm32-unknown-unknown --release
+
+      - name: Move build output
+        run: cp target/wasm32-unknown-unknown/release/macroquad-jumper.wasm _site/macroquad-jumper.wasm
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
